@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @ArnoDech
 - 👀 I’m interested in Data Analysis/Data Science/Data engineering/Software engineering
-- 📈 My expertises : Python Data Science & Web dev : Flask/Django/Numpy/Spark/Tensorflow/PyTorch/Scikit-Learn/Pandas
+- 📈 My expertise : Python Data Science & Web dev : Flask/Django/Numpy/Spark/Tensorflow/PyTorch/Scikit-Learn/Pandas
                       SQL : Oracle, MySQL, PostgreSQL, SQL Server
                       Excel/VBA Advanced
                       Dataviz : PowerBI, Spotfire, Tableau, Qliksense
