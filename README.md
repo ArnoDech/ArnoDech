@@ -15,3 +15,13 @@ class AboutMe:
 
 profile = AboutMe()
 ```
+
+<h2 align="center">Contribution Landscape</h2>
+
+<p align="center">
+  <img
+    src="./assets/contribution-landscape.svg"
+    alt="Violet isometric GitHub contribution landscape"
+    width="100%"
+  />
+</p>
