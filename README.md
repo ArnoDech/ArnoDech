@@ -70,8 +70,7 @@ class AboutMe:
     )
 
     links: dict[str, str] = field(default_factory=lambda: {
-        "GitHub": "https://github.com/xxxxxxxxxxxxxxxxx",
-        "LinkedIn": "https://linkedin.com/in/xxxxxxxxxxxxxxxxx",
+        "LinkedIn": "https://fr.linkedin.com/in/arnaud-deschamp",
     })
 
 profile = AboutMe()
