@@ -1,14 +1,78 @@
 ```python
-class AboutMe () :
-    def __init__(self):
-        self.pseudo = "ArnoDech"
-        self.email = "arnauddeschamp9@gmail.com"
-        self.job = "Data & AI Engineer"
-        self.data_engineering_tools = ["Talend(certified)", "Airbyte", "Airflow", "DBT", "Databricks(certified)", "Kafka", "ESB", "Debezium", "Flink", "Snowflake(certified)", "Spark"]
-        self.data_analytics_toos = ["PowerBI", "Spotfire", "Tableau", "Qliksense"]
-        self.cloud = ["Azure(certified)", "AWS"]
-        self.data_science_ia = ["Numpy", "Pandas", "Scikit-Learn", "Tensorflow", "Azure AI Foundry", "Azure ML", "LLM", "ML", "LangChain", "NLP", "DL"]
-        self.web_dev = ["FastAPI", "Flask", "Django"]
+from dataclasses import dataclass, field
 
-new=AboutMe()
+@dataclass(frozen=True)
+class AboutMe:
+    username: str = "ArnoDech"
+    role: str = "Data & AI Engineer"
+        email: str = "arnauddeschamp9@gmail.com"
+
+    summary: str = (
+        "I design scalable data platforms and AI-powered solutions, "
+        "from data ingestion to production deployment."
+    )
+
+    data_engineering: tuple[str, ...] = (
+        "Airbyte",
+        "Apache Airflow",
+        "Apache Kafka",
+        "Apache Flink",
+        "Apache Spark",
+        "Databricks",
+        "dbt",
+        "Debezium",
+        "Snowflake",
+        "Talend",
+    )
+
+    analytics: tuple[str, ...] = (
+        "Power BI",
+        "Qlik Sense",
+        "Spotfire",
+        "Tableau",
+    )
+
+    cloud: tuple[str, ...] = (
+        "Microsoft Azure",
+        "AWS",
+    )
+
+    ai_and_data_science: tuple[str, ...] = (
+        "Azure AI Foundry",
+        "Azure Machine Learning",
+        "LangChain",
+        "LLMs",
+        "NLP",
+        "NumPy",
+        "pandas",
+        "scikit-learn",
+        "TensorFlow",
+    )
+
+    backend: tuple[str, ...] = (
+        "FastAPI",
+        "Flask",
+        "Django",
+    )
+
+    certifications: tuple[str, ...] = (
+        "Microsoft Azure — Certification name",
+        "Databricks — Certification name",
+        "Snowflake — Certification name",
+        "Talend — Certification name",
+    )
+
+    interests: tuple[str, ...] = (
+        "Data architecture",
+        "Generative AI",
+        "MLOps",
+        "Real-time data processing",
+    )
+
+    links: dict[str, str] = field(default_factory=lambda: {
+        "GitHub": "https://github.com/xxxxxxxxxxxxxxxxx",
+        "LinkedIn": "https://linkedin.com/in/xxxxxxxxxxxxxxxxx",
+    })
+
+profile = AboutMe()
 ```
