@@ -1,77 +1,17 @@
 ```python
-from dataclasses import dataclass, field
-
-@dataclass(frozen=True)
 class AboutMe:
-    username: str = "ArnoDech"
-    role: str = "Data & AI Engineer"
-        email: str = "arnauddeschamp9@gmail.com"
-
-    summary: str = (
-        "I design scalable data platforms and AI-powered solutions, "
-        "from data ingestion to production deployment."
-    )
-
-    data_engineering: tuple[str, ...] = (
-        "Airbyte",
-        "Apache Airflow",
-        "Apache Kafka",
-        "Apache Flink",
-        "Apache Spark",
-        "Databricks",
-        "dbt",
-        "Debezium",
-        "Snowflake",
-        "Talend",
-    )
-
-    analytics: tuple[str, ...] = (
-        "Power BI",
-        "Qlik Sense",
-        "Spotfire",
-        "Tableau",
-    )
-
-    cloud: tuple[str, ...] = (
-        "Microsoft Azure",
-        "AWS",
-    )
-
-    ai_and_data_science: tuple[str, ...] = (
-        "Azure AI Foundry",
-        "Azure Machine Learning",
-        "LangChain",
-        "LLMs",
-        "NLP",
-        "NumPy",
-        "pandas",
-        "scikit-learn",
-        "TensorFlow",
-    )
-
-    backend: tuple[str, ...] = (
-        "FastAPI",
-        "Flask",
-        "Django",
-    )
-
-    certifications: tuple[str, ...] = (
-        "Microsoft Azure — Certification name",
-        "Databricks — Certification name",
-        "Snowflake — Certification name",
-        "Talend — Certification name",
-    )
-
-    interests: tuple[str, ...] = (
-        "Data architecture",
-        "Generative AI",
-        "MLOps",
-        "Real-time data processing",
-    )
-
-    links: dict[str, str] = field(default_factory=lambda: {
-        "LinkedIn": "https://fr.linkedin.com/in/arnaud-deschamp",
-    })
+    def __init__(self):
+        self.username = "ArnoDech"
+        self.role = "Data & AI Engineer"
+        self.contact = "arnauddeschamp9@gmail.com"
+        self.skills = {
+            "Data Engineering": ["Airflow", "Kafka", "Spark", "Flink", "dbt", "Databricks", "Snowflake"],
+            "Analytics": ["Power BI", "Tableau", "Qlik Sense", "Spotfire"],
+            "Cloud": ["Azure", "AWS"],
+            "AI & Data Science": ["Python", "pandas", "scikit-learn", "TensorFlow", "LangChain", "LLMs"],
+            "Backend": ["FastAPI", "Flask", "Django"],
+        }
+        self.certifications = ["Azure", "Databricks", "Snowflake", "Talend"]
 
 profile = AboutMe()
 ```
